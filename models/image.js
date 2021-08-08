@@ -10,14 +10,14 @@ const schema = new mongoose.Schema({
     type: String,
   },
   contentType: {
-    type: String
+    type: String,
   },
   image: {
-    type: String
+    type: String,
   },
   imageUrl: {
-    type: String
-  }
+    type: String,
+  },
 });
 
-module.exports = mongoose.model('Image', schema);
+module.exports = mongoose.model("image", schema);

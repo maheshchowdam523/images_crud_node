@@ -14,7 +14,7 @@ router.post("/", updload.array("image", 20), async (req, res, next) => {
 
 router.get("/", async (req, res, next) => {
   try {
-    return res.status(200).json(getImages);
+    return res.status(200).json(getImages(req?.query));
   } catch (err) {
     console.log(err);
     next({ status: 400, message: "Failed to fetch users" });
